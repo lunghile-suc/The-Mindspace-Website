@@ -1,0 +1,113 @@
+$primary_color: #284B63;
+$secondary_color: #3D6E71;
+$third_color: #778D9D;
+$fourth_color: #83A2A4;
+$fifth_color: #E0E0E0;
+$sixth_color: #DAE4E4;
+
+@import 'mixins';
+@import 'header';
+@import 'navbar';
+@import 'about';
+@import 'services';
+@import 'our-therapists';
+@import 'bottom-section';
+@import 'contact';
+@import 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "january_Shine";
+    src: url("/fonts/January-Shine.ttf");
+}
+
+body{
+    font-family: 'Montserrat-Regular', sans-serif;
+    background-color: $fifth_color;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat-Regular', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Montserrat-Regular', sans-serif;
+    line-height: 25px;
+}
+
+section{
+    margin: 2rem 0;
+}
+
+.section-header{
+    position: relative;
+    width: 100%;
+    background: url(/images/img-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2rem;
+
+    p, h1{
+        text-align: center;
+        color: $secondary_color;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+.book_now_btn{
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 0.5rem 1rem;
+    background-color: $fourth_color;
+
+    a{
+        color: #fff;
+    }
+}
+
+.container{
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mediaQuery(480px){
+        max-width: 570px;
+    }
+
+    @include mediaQuery(768px){
+        max-width: 720px;
+    }
+
+    @include mediaQuery(992px){
+        max-width: 960px;
+    }
+
+    @include mediaQuery(1200px){
+        max-width: 1140px;
+    }
+}

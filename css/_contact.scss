@@ -1,0 +1,50 @@
+.contact_header{
+    
+}
+
+.form_section{
+
+    .form_controls{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .form-control{
+
+        @include mediaQuery(600px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+
+        label{
+            display: block;
+            color: $secondary_color;
+        }
+
+        input, select{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            outline: none;
+            border: 1px solid $third_color;
+            color: #302d2d;
+        }
+    }
+
+    .form_btn{
+        display: flex;
+        justify-content: flex-end;
+
+        input{
+            background-color: $primary_color;
+            padding: 0.5rem 2rem;
+            color: #fff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

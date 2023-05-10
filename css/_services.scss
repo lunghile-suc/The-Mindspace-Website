@@ -1,0 +1,39 @@
+.services-section{
+    position: relative;
+    width: 100%;
+    background: url(/images/bg-2.png);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 7rem 0;
+
+    .cards{
+        display: grid;
+        justify-content: center;
+        grid-gap: 1rem;
+        width: 100%;
+        margin: 2rem 0;
+        padding: 2rem 0;
+        overflow: hidden;
+
+        @include mediaQuery(768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .card{
+            border: 1px solid $secondary_color;
+            padding: 2rem;
+            margin: 1rem;
+
+            h3{
+                color: $secondary_color;
+                margin: 1rem 0;
+            }
+
+            li{
+                line-height: 30px;
+            }
+        }
+    }
+}

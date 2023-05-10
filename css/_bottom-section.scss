@@ -1,0 +1,55 @@
+.bottom-section {
+    margin: 0;
+
+    .book-section {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 3rem 0;
+        background: url(/images/bg-3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        text-align: center;
+
+        @include mediaQuery(992px){
+            padding: 5rem 0;
+        }
+
+        h3{
+            color: $primary_color;
+            text-align: center;
+
+            @include mediaQuery(992px){
+                font-size: 2rem;
+            }
+        }
+
+        div{
+            position: relative;
+            display: inline-block;
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+
+            ::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 30%;
+                height: 2px;
+                margin: 0 auto;
+                margin: 0 auto;
+                background-color: $secondary_color;
+            }
+
+            a{
+                color: $secondary_color;
+            }
+        }
+    }
+}

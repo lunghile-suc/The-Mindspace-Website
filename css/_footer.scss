@@ -1,0 +1,60 @@
+footer{
+    padding-top: 3rem;
+    background-color: $primary_color;
+
+    p:last-child{
+        background-color: #192d3a;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .footer_logo{
+        @include mediaQuery(480px){
+            margin-top: 2.5rem;
+        }
+    }
+
+    .footer-content{
+        display: grid;
+        justify-content: center;
+        grid-gap: 2rem;
+        width: 100%;
+        margin: 2rem 0;
+        padding: 2rem 0;
+        overflow: hidden;
+
+        @include mediaQuery(480px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mediaQuery(992px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+    }
+
+    .ft-h3{
+        margin: 1rem 0;
+        color: $secondary_color;
+    }
+
+    .navigations, .ft-therapists, .contact_us{
+        color: #fff;
+
+        li{
+            list-style: none;
+            line-height: 30px;
+        }
+
+        a{
+            display: block;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+}

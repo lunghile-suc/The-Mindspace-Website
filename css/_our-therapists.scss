@@ -1,0 +1,97 @@
+.therapists_section {
+
+    .therapists_slides {
+        padding: 2rem 0;
+        margin: 2rem 0;
+        overflow: hidden;
+    }
+
+    .therapist_slide {
+
+        @include mediaQuery(992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 2rem 0;
+        }
+
+    }
+
+    .tp_img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1rem 0;
+
+        @include mediaQuery(992px) {
+            margin: 0;
+        }
+
+        img {
+            position: relative;
+            width: 80%;
+
+            @include mediaQuery(768px) {
+                width: 60%;
+            }
+
+        }
+    }
+
+    .slide_content {
+        background-color: #fff;
+        color: $secondary_color;
+        text-align: center;
+        border-radius: 20px;
+        padding: 0 2rem;
+
+        h1 {
+            font-family: january_Shine;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $fifth_color;
+            }
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .tp_edu {
+            color: #ac6207;
+            margin-top: 0;
+        }
+    }
+
+    .btn-wrap {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .btn_arrws {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 30%;
+                margin: 0 1rem;
+            }
+        }
+    }
+}
