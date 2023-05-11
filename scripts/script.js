@@ -63,12 +63,14 @@ $(document).ready(function () {
 	});
 });
 
-var tp_desc = document.querySelector(".tp_desc");
-var result;
-
-// Slice is JS function
-result = tp_desc.slice(0, 10)+'...';
-
-
-var longText = $('#tp_desc');
-longText.text(longText.text().substr(0, 10));
+// function limitText() {
+	var contentElement = document.querySelector(".tp_description");
+	var content = contentElement.textContent;
+	var limit = 1000; // Maximum number of characters to display
+  
+	if (content.length > limit) {
+	  var limitedContent = content.slice(0, limit) + "...";
+	  contentElement.textContent = limitedContent;
+	}
+//   }
+  

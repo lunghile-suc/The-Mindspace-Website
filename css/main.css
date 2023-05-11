@@ -56,6 +56,19 @@ nav {
 nav .logo img {
   width: 50%;
 }
+@media screen and (min-width: 768px) {
+  nav .logo img {
+    margin-left: 2rem;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav .logo img {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    width: 50%;
+  }
+}
 nav ul {
   position: fixed;
   display: flex;
@@ -222,6 +235,63 @@ ul.active {
   overflow: hidden;
   padding: 7rem 0;
 }
+.services-section .s_img {
+  position: absolute;
+  width: 70%;
+}
+@media screen and (min-width: 480px) {
+  .services-section .s_img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-section .s_img {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-section .s_img {
+    width: 30%;
+  }
+}
+.services-section .img_2 {
+  top: -60px;
+  left: -100px;
+}
+@media screen and (min-width: 480px) {
+  .services-section .img_2 {
+    left: -180px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-section .img_2 {
+    left: -150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-section .img_2 {
+    width: 30%;
+  }
+}
+.services-section .img_3 {
+  bottom: -30px;
+  right: -100px;
+}
+@media screen and (min-width: 480px) {
+  .services-section .img_3 {
+    right: -180px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-section .img_3 {
+    right: -150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-section .img_3 {
+    width: 30%;
+  }
+}
 .services-section .cards {
   display: grid;
   justify-content: center;
@@ -264,6 +334,7 @@ ul.active {
 .therapists_section .tp_img {
   display: flex;
   justify-content: center;
+  align-items: start;
   width: 100%;
   margin: 1rem 0;
 }
@@ -279,12 +350,13 @@ ul.active {
 @media screen and (min-width: 768px) {
   .therapists_section .tp_img img {
     width: 60%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 .therapists_section .slide_content {
   background-color: #fff;
   color: #3D6E71;
-  text-align: center;
   border-radius: 20px;
   padding: 0 2rem;
 }
@@ -292,11 +364,13 @@ ul.active {
   font-family: january_Shine;
   font-size: 4rem;
   font-weight: bold;
+  text-align: center;
 }
 .therapists_section .slide_content h3 {
   position: relative;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 .therapists_section .slide_content h3::before {
   content: "";
@@ -309,6 +383,7 @@ ul.active {
 }
 .therapists_section .slide_content p {
   margin: 1rem 0;
+  text-align: center;
 }
 .therapists_section .slide_content .tp_edu {
   color: #ac6207;
@@ -329,6 +404,29 @@ ul.active {
 .therapists_section .btn-wrap .btn_arrws img {
   width: 30%;
   margin: 0 1rem;
+}
+.therapists_section .slide_flex {
+  line-height: 25px;
+}
+.therapists_section .area_of_interest {
+  padding-bottom: 2rem;
+}
+.therapists_section .area_of_interest h3 {
+  margin: 0;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.therapists_section .area_of_interest h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+}
+.therapists_section .area_of_interest li {
+  line-height: 25px;
 }
 
 .bottom-section {

@@ -19,6 +19,7 @@
     .tp_img {
         display: flex;
         justify-content: center;
+        align-items: start;
         width: 100%;
         margin: 1rem 0;
 
@@ -32,6 +33,7 @@
 
             @include mediaQuery(768px) {
                 width: 60%;
+                object-fit: contain;
             }
 
         }
@@ -40,7 +42,6 @@
     .slide_content {
         background-color: #fff;
         color: $secondary_color;
-        text-align: center;
         border-radius: 20px;
         padding: 0 2rem;
 
@@ -48,12 +49,14 @@
             font-family: january_Shine;
             font-size: 4rem;
             font-weight: bold;
+            text-align: center;
         }
 
         h3 {
             position: relative;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
+            text-align: center;
 
             &::before {
                 content: '';
@@ -68,6 +71,7 @@
 
         p {
             margin: 1rem 0;
+            text-align: center;
         }
 
         .tp_edu {
@@ -92,6 +96,32 @@
                 width: 30%;
                 margin: 0 1rem;
             }
+        }
+    }
+
+    .slide_flex{
+        line-height: 25px;
+    }
+
+    .area_of_interest{
+        padding-bottom: 2rem;
+        h3{
+            margin: 0;
+            text-align-last: left;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+            }
+        }
+
+        li{
+            line-height: 25px;
         }
     }
 }

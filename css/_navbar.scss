@@ -27,6 +27,18 @@ nav {
 
     .logo img {
         width: 50%;
+
+        @include mediaQuery(768px) {
+            margin-left: 2rem;
+            width: 40%;
+        }
+
+        @include mediaQuery(992px) {
+            margin-top: 1rem;
+            margin-left: 2.5rem;
+            width: 50%;
+        }
+        
     }
 
     ul {
