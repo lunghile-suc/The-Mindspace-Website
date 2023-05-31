@@ -1,8 +1,8 @@
 .therapists_section {
+    
 
     .therapists_slides {
-        padding: 2rem 0;
-        margin: 2rem 0;
+        position: relative;
         overflow: hidden;
     }
 
@@ -123,5 +123,20 @@
         li{
             line-height: 25px;
         }
+    }
+}
+
+.tp_description{
+    height: 230px;
+    overflow: hidden;
+}
+
+.tp_description.initial_height{
+    height: initial;
+}
+
+.read_more_link{
+    p{
+        cursor: pointer;
     }
 }

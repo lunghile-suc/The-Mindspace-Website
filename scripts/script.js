@@ -1,35 +1,38 @@
 $('.menu-toggle').click(function () {
-    $('ul').toggleClass('active');
+	$('ul').toggleClass('active');
 });
 
 $('.link-toggle').click(function () {
-    $('ul').toggleClass('active');
+	$('ul').toggleClass('active');
 });
+
+var read_more_btn = document.getElementsByClassName("read_more_link");
+const tp_description = document.querySelectorAll(".tp_description");
 
 // hide when you scroll down and show menu when you scroll up
 var previousScroll = 0;
 $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll < 100) {
-        showTopNav();
-    } else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
-        if (currentScroll > previousScroll) {
-            hideNav();
-            $('ul').removeClass('active');
-        } else {
-            showNav();
+	var currentScroll = $(this).scrollTop();
+	if (currentScroll < 100) {
+		showTopNav();
+	} else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+		if (currentScroll > previousScroll) {
+			hideNav();
+			$('ul').removeClass('active');
+		} else {
+			showNav();
 
-        }
-        previousScroll = currentScroll;
-    }
+		}
+		previousScroll = currentScroll;
+	}
 });
 
 function hideNav() {
-    $(".nav").addClass("hide");
+	$(".nav").addClass("hide");
 }
 
 function showNav() {
-    $(".nav").removeClass("hide");
+	$(".nav").removeClass("hide");
 }
 
 $(document).ready(function () {
@@ -37,16 +40,22 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		arrows: true,
 		infinite: true,
-        speed: 300,
+		speed: 300,
 		autoplay: false,
-        adaptiveHeight: true
+		adaptiveHeight: false
 	});
 	$(".prev-btn").click(function () {
 		$(".therapists_slides").slick("slickPrev");
+		for (var i = 0; i < tp_description.length; i++) {
+			tp_description[i].classList.remove("initial_height");
+		}
 	});
 
 	$(".next-btn").click(function () {
 		$(".therapists_slides").slick("slickNext");
+		for (var i = 0; i < tp_description.length; i++) {
+			tp_description[i].classList.remove("initial_height");
+		}
 	});
 	$(".prev-btn").addClass("slick-disabled");
 	$(".therapists_slides").on("afterChange", function () {
@@ -63,14 +72,10 @@ $(document).ready(function () {
 	});
 });
 
-// function limitText() {
-	var contentElement = document.querySelector(".tp_description");
-	var content = contentElement.textContent;
-	var limit = 1000; // Maximum number of characters to display
-  
-	if (content.length > limit) {
-	  var limitedContent = content.slice(0, limit) + "...";
-	  contentElement.textContent = limitedContent;
-	}
-//   }
-  
+for (var i = 0; i < read_more_btn.length; i++) {
+	read_more_btn[i].addEventListener('click', () => {
+		for (var i = 0; i < tp_description.length; i++) {
+			tp_description[i].classList.toggle("initial_height");
+		}
+	}, false);
+}

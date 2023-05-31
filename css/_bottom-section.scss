@@ -1,6 +1,18 @@
 .bottom-section {
     margin: 0;
 
+    .images{
+
+        img{
+            margin: 0;
+            padding: 0;
+        }
+
+        @include mediaQuery(480px){
+            display: flex;
+        }
+    }
+
     .book-section {
         position: relative;
         display: grid;

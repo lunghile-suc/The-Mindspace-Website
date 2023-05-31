@@ -171,6 +171,55 @@ ul.active {
   transform: scale(1);
 }
 
+.about-section {
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+.about-section .a_img {
+  position: absolute;
+  width: 80%;
+  z-index: -1;
+}
+@media screen and (min-width: 480px) {
+  .about-section .a_img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-section .a_img {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-section .a_img {
+    width: 30%;
+  }
+}
+.about-section .img_av2 {
+  bottom: 400px;
+  right: -110px;
+}
+@media screen and (min-width: 480px) {
+  .about-section .img_av2 {
+    right: -90px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-section .img_av2 {
+    width: 50%;
+    right: -110px;
+    bottom: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-section .img_av2 {
+    width: 40%;
+  }
+}
+.about-section .img_av3 {
+  bottom: -50px;
+  left: -50px;
+}
 .about-section .puase-relax {
   position: relative;
   display: flex;
@@ -221,8 +270,14 @@ ul.active {
 .about-section p {
   color: #3D6E71;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1rem auto;
   line-height: 30px;
+  z-index: 100;
+}
+@media screen and (min-width: 992px) {
+  .about-section p {
+    width: 80%;
+  }
 }
 
 .services-section {
@@ -320,8 +375,7 @@ ul.active {
 }
 
 .therapists_section .therapists_slides {
-  padding: 2rem 0;
-  margin: 2rem 0;
+  position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 992px) {
@@ -429,8 +483,30 @@ ul.active {
   line-height: 25px;
 }
 
+.tp_description {
+  height: 230px;
+  overflow: hidden;
+}
+
+.tp_description.initial_height {
+  height: initial;
+}
+
+.read_more_link p {
+  cursor: pointer;
+}
+
 .bottom-section {
   margin: 0;
+}
+.bottom-section .images img {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 480px) {
+  .bottom-section .images {
+    display: flex;
+  }
 }
 .bottom-section .book-section {
   position: relative;
@@ -612,6 +688,7 @@ p {
 }
 
 section {
+  position: relative;
   margin: 2rem 0;
 }
 
