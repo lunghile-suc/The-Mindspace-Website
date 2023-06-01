@@ -124,6 +124,42 @@
             line-height: 25px;
         }
     }
+
+    .a_img {
+        position: absolute;
+        width: 80%;
+        z-index: -1;
+    
+        @include mediaQuery(480px) {
+          width: 50%;
+        }
+    
+        @include mediaQuery(768px) {
+          width: 40%;
+        }
+    
+        @include mediaQuery(992px) {
+          width: 30%;
+        }
+      }
+    
+      .img_av2 {
+        // bottom: 400px;
+        right: -110px;
+    
+        @include mediaQuery(480px) {
+          right: -90px;
+        }
+    
+        @include mediaQuery(768px) {
+          width: 50%;
+          right: -110px;
+        }
+    
+        @include mediaQuery(992px) {
+          width: 40%;
+        }
+      }
 }
 
 .tp_description{

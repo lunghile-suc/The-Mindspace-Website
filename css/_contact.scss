@@ -1,8 +1,67 @@
 .contact_header{
-    
+    background: url(/images/friendly-black-psychologist-lady-talking-with-soldier-woman-during-therapy-session.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .form_section{
+    overflow: hidden;
+
+    .a_img {
+        position: absolute;
+        width: 80%;
+        z-index: -1;
+    
+        @include mediaQuery(480px) {
+          width: 50%;
+        }
+    
+        @include mediaQuery(768px) {
+          width: 40%;
+        }
+    
+        @include mediaQuery(992px) {
+          width: 30%;
+        }
+      }
+    
+      .img_av2 {
+        bottom: 400px;
+        right: -110px;
+    
+        @include mediaQuery(480px) {
+          right: -90px;
+        }
+    
+        @include mediaQuery(768px) {
+          width: 50%;
+          right: -110px;
+          bottom: 250px;
+        }
+    
+        @include mediaQuery(992px) {
+          width: 40%;
+        }
+      }
+    
+      .img_av3 {
+        bottom: -50px;
+        left: -50px;
+    
+        // @include mediaQuery(480px){
+        //     right: -180px;
+        // }
+    
+        // @include mediaQuery(768px){
+        //     right: -150px;
+        // }
+    
+        // @include mediaQuery(992px){
+        //     width: 30%;
+        // }
+      }
+    
 
     .form_controls{
         display: flex;

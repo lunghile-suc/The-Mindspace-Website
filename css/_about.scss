@@ -86,7 +86,7 @@
     text-transform: uppercase;
     font-variant-ligatures: none;
     letter-spacing: 6px;
-    animation: rotate 25s linear infinite;
+    // animation: rotate 25s linear infinite;
     transform-origin: 250px 250px;
   }
 
@@ -94,11 +94,11 @@
     max-width: 80vmin;
   }
 
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+  // @keyframes rotate {
+  //   to {
+  //     transform: rotate(360deg);
+  //   }
+  // }
 
   .textcircle {
     transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);

@@ -6,6 +6,10 @@
         img{
             margin: 0;
             padding: 0;
+
+            @include mediaQuery(992px){
+                width: 50%;
+            }
         }
 
         @include mediaQuery(480px){

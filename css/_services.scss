@@ -8,7 +8,7 @@
     overflow: hidden;
     padding: 7rem 0;
 
-    .s_img{
+    .s_img, .a_img{
         position: absolute;
         width: 70%;
 
@@ -56,6 +56,40 @@
 
         @include mediaQuery(992px){
             width: 30%;
+        }
+    }
+
+    .img_av31{   
+        // top: -60px;
+        right: -100px;
+
+        @include mediaQuery(480px){
+            right: -180px;
+        }
+
+        @include mediaQuery(768px){
+            right: -110px;
+        }
+
+        @include mediaQuery(992px){
+            width: 30%;
+        }
+    }
+
+    .img_av32{   
+        bottom: 50px;
+        left: 0px;
+
+        @include mediaQuery(480px){
+            left: 0px;
+        }
+
+        @include mediaQuery(768px){
+            left: 0px;
+        }
+
+        @include mediaQuery(992px){
+            left: 0px;
         }
     }
 
