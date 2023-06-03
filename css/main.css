@@ -258,9 +258,6 @@ ul.active {
   transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: 250px 250px;
 }
-.about-section svg:hover .textcircle {
-  transform: scale(1.2) rotate(90deg);
-}
 .about-section p {
   color: #3D6E71;
   text-align: center;
@@ -565,6 +562,13 @@ ul.active {
 .read_more_link p {
   cursor: pointer;
 }
+.read_more_link p:hover {
+  color: #ac6207;
+}
+
+.sumaya {
+  border-radius: 5%;
+}
 
 .bottom-section {
   margin: 0;
@@ -637,7 +641,7 @@ ul.active {
   background: url(/images/friendly-black-psychologist-lady-talking-with-soldier-woman-during-therapy-session.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
 }
 
 .form_section {

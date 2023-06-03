@@ -44,31 +44,31 @@
                 <h1>Get in Touch</h1>
             </div>
             <div class="form_controls">
-                <form action="" method="post">
+                <form class="form">
                     <div class="form-control">
                         <div>
                             <label for="">Name</label>
-                            <input type="text" name="first_name" id="">
+                            <input type="text" name="first_name" id="first_name" required>
                         </div>
                         <div>
                             <label for="">Last Name</label>
-                            <input type="text" name="last_name" id="">
+                            <input type="text" name="last_name" id="last_name" required>
                         </div>
                     </div>
                     <div class="form-control">
                         <div>
                             <label for="">Phone Number</label>
-                            <input type="number" name="phone_number" id="">
+                            <input type="text" name="phone_number" id="phone_number" required>
                         </div>
                         <div>
                             <label for="">Email Address</label>
-                            <input type="email" name="email" id="">
+                            <input type="email" name="email" id="email" required>
                         </div>
                     </div>
                     <div class="form-control">
                         <div>
                             <label for="">What type of therapy service are you interested in?</label>
-                            <select name="services" id="">
+                            <select name="services" id="therapy_service">
                                 <option value="">Couple Therapy</option>
                                 <option value="">Depression</option>
                                 <option value="">Attachment Difficulties</option>
@@ -79,7 +79,7 @@
                         </div>
                         <div>
                             <label for="">Which therapist would you like to book a session with?</label>
-                            <select name="therapists" id="">
+                            <select name="therapists" id="therapist">
                                 <option value="">Caroline Kapp</option>
                                 <option value="">Alexander Oosthuysen</option>
                                 <option value="">Kim Serebro</option>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <div class="form_btn">
-                        <input type="submit" value="SEND">
+                        <input id="btn" type="submit" value="SEND">
                     </div>
                 </form>
             </div>
@@ -98,10 +98,6 @@
         <img src="./images/art-vector-1.png" class="img_av3 a_img" alt="" srcset="">
     </section>
     <section class="bottom-section">
-        <div class="images">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
         <div class="book-section">
             <h3>Book your next session <br> at Mind Space</h3>
             <div>
@@ -142,6 +138,10 @@
         </div>
         <p>The Mind Space © All Rights Reserved 2023. Created by Mvelisto Inc</p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>

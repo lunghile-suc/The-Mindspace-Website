@@ -79,3 +79,30 @@ for (var i = 0; i < read_more_btn.length; i++) {
 		}
 	}, false);
 }
+
+// form submittion
+
+var form_submit = document.querySelector(".form");
+var first_name = document.getElementById("first_name").value;
+var last_name = document.getElementById("last_name").value;
+var phone_number = document.getElementById("phone_number").value;
+var email = document.getElementById("email").value;
+var therapy_service = document.getElementById("therapy_service").value;
+var therapist = document.getElementById("therapist").value;
+
+form_submit.addEventListener('submit', () => {
+	Email.send({
+		Host : "smtp.gmail.com",
+		Username : "clsuccess6@gmail.com",
+		Password : "lungh!le_7",
+		To : 'lunghilesuccess1@gmail.com',
+		From : email,
+		Subject : "New email from Mindspace",
+		Body :
+			"New email has been sent from the mindspace website by" + first_name + last_name + "with the phone number: " + phone_number
+			 + " requesting services of " + therapy_service + " from " + therapist
+	}).then(
+	  message => alert("Thank you!. The email has been sent.")
+	);
+   console.log(email);
+});

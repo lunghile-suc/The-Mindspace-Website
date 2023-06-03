@@ -174,5 +174,13 @@
 .read_more_link{
     p{
         cursor: pointer;
+
+        &:hover{
+            color: #ac6207;
+        }
     }
+}
+
+.sumaya{
+    border-radius: 5%;
 }
