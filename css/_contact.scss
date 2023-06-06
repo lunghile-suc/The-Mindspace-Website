@@ -18,48 +18,57 @@
         }
     
         @include mediaQuery(768px) {
-          width: 40%;
+          width: 25%;
         }
     
         @include mediaQuery(992px) {
-          width: 30%;
+          width: 25%;
         }
       }
     
       .img_av2 {
         bottom: 400px;
-        right: -110px;
+        right: 0;
     
         @include mediaQuery(480px) {
           right: -90px;
         }
     
         @include mediaQuery(768px) {
-          width: 50%;
-          right: -110px;
-          bottom: 250px;
+          width: 40%;
+          right: 0px;
+          bottom: 100px;
         }
     
         @include mediaQuery(992px) {
-          width: 40%;
+          width: 25%;
         }
+
+        @include mediaQuery(1200px){
+          width: 25%;
+          bottom: 0px;
+      }
       }
     
       .img_av3 {
-        bottom: -50px;
-        left: -50px;
+        bottom: 0px;
+        left: 0px;
     
-        // @include mediaQuery(480px){
-        //     right: -180px;
-        // }
+        @include mediaQuery(480px){
+            right: -180px;
+        }
     
-        // @include mediaQuery(768px){
-        //     right: -150px;
-        // }
+        @include mediaQuery(768px){
+            width: 30%;
+        }
     
-        // @include mediaQuery(992px){
-        //     width: 30%;
-        // }
+        @include mediaQuery(992px){
+            width: 30%;
+        }
+
+        @include mediaQuery(1200px){
+            width: 25%;
+        }
       }
     
 

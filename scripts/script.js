@@ -35,6 +35,7 @@ function showNav() {
 	$(".nav").removeClass("hide");
 }
 
+// slick slider
 $(document).ready(function () {
 	$(".therapists_slides").slick({
 		slidesToShow: 1,
@@ -72,6 +73,8 @@ $(document).ready(function () {
 	});
 });
 
+
+// read more button on therapist slide
 for (var i = 0; i < read_more_btn.length; i++) {
 	read_more_btn[i].addEventListener('click', () => {
 		for (var i = 0; i < tp_description.length; i++) {
@@ -81,28 +84,31 @@ for (var i = 0; i < read_more_btn.length; i++) {
 }
 
 // form submittion
+let form_submit = document.querySelector(".form");
+let first_name = document.querySelector("#first_name");
+let last_name = document.querySelector("#last_name");
+let phone_number = document.querySelector("#phone_number");
+let email = document.querySelector("#email");
+let therapy_service = document.querySelector("#therapy_service");
+let therapist = document.querySelector("#therapist");
 
-var form_submit = document.querySelector(".form");
-var first_name = document.getElementById("first_name").value;
-var last_name = document.getElementById("last_name").value;
-var phone_number = document.getElementById("phone_number").value;
-var email = document.getElementById("email").value;
-var therapy_service = document.getElementById("therapy_service").value;
-var therapist = document.getElementById("therapist").value;
+form_submit.addEventListener('submit', (e) => {
+	e.preventDefault();
 
-form_submit.addEventListener('submit', () => {
 	Email.send({
 		Host : "smtp.gmail.com",
 		Username : "clsuccess6@gmail.com",
 		Password : "lungh!le_7",
-		To : 'lunghilesuccess1@gmail.com',
-		From : email,
+		To : "lunghilesuccess1@gmail.com",
+		From : email.value,
 		Subject : "New email from Mindspace",
 		Body :
-			"New email has been sent from the mindspace website by" + first_name + last_name + "with the phone number: " + phone_number
-			 + " requesting services of " + therapy_service + " from " + therapist
+			"New email has been sent from the mindspace website by" + first_name.value + last_name.value + "with the phone number: " + phone_number.value
+			 + " requesting services of " + therapy_service.value + " from " + therapist.value
 	}).then(
-	  message => alert("Thank you!. The email has been sent.")
+	  message => alert("Thank you!. The email has been sent."), 
+	  console.log()
 	);
-   console.log(email);
-});
+
+	reset();
+}, false);
