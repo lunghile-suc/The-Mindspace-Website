@@ -15,7 +15,7 @@ $sixth_color: #DAE4E4;
 @import 'contact';
 @import 'footer';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,12 +33,12 @@ $sixth_color: #DAE4E4;
     src: url("/fonts/January-Shine.ttf");
 }
 
-body{
+body {
     font-family: 'Montserrat-Regular', sans-serif;
     background-color: $fifth_color;
 }
 
-img{
+img {
     width: 100%;
     max-width: 100%;
 }
@@ -54,12 +54,12 @@ p {
     line-height: 25px;
 }
 
-section{
+section {
     position: relative;
     margin: 2rem 0;
 }
 
-.section-header{
+.section-header {
     position: relative;
     width: 100%;
     background: none;
@@ -70,45 +70,67 @@ section{
     margin-bottom: 1rem;
     padding: 2rem;
 
-    p, h1{
+    p,
+    h1 {
         text-align: center;
         color: $secondary_color;
     }
 
-    p{
+    p {
         font-size: 0.8rem;
+
+        &:last-child {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
     }
 }
 
-.book_now_btn{
+.book_now_btn {
     display: inline-block;
     margin: 2rem 0;
     padding: 0.5rem 1rem;
     background-color: $fourth_color;
 
-    a{
+    a {
         color: #fff;
     }
 }
 
-.container{
+.whatsapp_link {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 50px;
+    z-index: 1000;
+    overflow: hidden;
+
+    @include mediaQuery(992px) {
+        width: 70px;
+        height: 70px;
+        right: 50px;
+    }
+}
+
+.container {
     padding: 0 15px;
     width: 100%;
     margin: 0 auto;
 
-    @include mediaQuery(480px){
+    @include mediaQuery(480px) {
         max-width: 570px;
     }
 
-    @include mediaQuery(768px){
+    @include mediaQuery(768px) {
         max-width: 720px;
     }
 
-    @include mediaQuery(992px){
+    @include mediaQuery(992px) {
         max-width: 960px;
     }
 
-    @include mediaQuery(1200px){
+    @include mediaQuery(1200px) {
         max-width: 1140px;
     }
 }
