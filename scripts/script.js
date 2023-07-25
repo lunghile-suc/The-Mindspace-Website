@@ -6,8 +6,6 @@ $('.link-toggle').click(function () {
 	$('ul').toggleClass('active');
 });
 
-var read_more_btn = document.getElementsByClassName("read_more_link");
-const tp_description = document.querySelectorAll(".tp_description");
 
 // hide when you scroll down and show menu when you scroll up
 var previousScroll = 0;
@@ -75,11 +73,22 @@ $(document).ready(function () {
 
 
 // read more button on therapist slide
+
+var read_more_btn = document.getElementsByClassName("read_more_link");
+const tp_description = document.querySelectorAll(".tp_description");
+
 for (var i = 0; i < read_more_btn.length; i++) {
 	read_more_btn[i].addEventListener('click', () => {
 		for (var i = 0; i < tp_description.length; i++) {
 			tp_description[i].classList.toggle("initial_height");
 		}
+
+		if(read_more_btn[i].innerHTML == "Read More..."){
+			read_more_btn[i].innerHTML = "";}
+		// }else{
+		// 	console.log("");
+		// }
+		
 	}, false);
 }
 

@@ -171,16 +171,19 @@
     height: initial;
 }
 
+.toggle_read_text.toggle_text{
+    content: 'Read Less';
+}
+
 .read_more_link{
-    p{
+
         cursor: pointer;
 
         &:hover{
             color: #ac6207;
         }
-    }
-}
 
+}
 .sumaya{
     border-radius: 5%;
 }

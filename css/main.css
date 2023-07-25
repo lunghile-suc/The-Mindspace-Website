@@ -4,7 +4,7 @@ header {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(/images/bg-1.png);
+  background: url(/images/bg-1.1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -22,6 +22,43 @@ header .hero-content h1 {
 @media screen and (min-width: 1200px) {
   header .hero-content h1 {
     font-size: 5rem;
+  }
+}
+header .hd_logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 70%;
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  header .hd_logo {
+    bottom: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .hd_logo {
+    right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .hd_logo {
+    right: 60px;
+  }
+}
+header .hd_logo img {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  header .hd_logo img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .hd_logo img {
+    width: 60%;
   }
 }
 
@@ -559,10 +596,14 @@ ul.active {
   height: initial;
 }
 
-.read_more_link p {
+.toggle_read_text.toggle_text {
+  content: "Read Less";
+}
+
+.read_more_link {
   cursor: pointer;
 }
-.read_more_link p:hover {
+.read_more_link:hover {
   color: #ac6207;
 }
 
@@ -734,7 +775,7 @@ ul.active {
   display: block;
   color: #3D6E71;
 }
-.form_section .form-control input, .form_section .form-control select {
+.form_section .form-control input, .form_section .form-control select, .form_section .form-control textarea {
   width: 100%;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
@@ -879,7 +920,7 @@ section {
 .book_now_btn {
   display: inline-block;
   margin: 2rem 0;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.2rem;
   background-color: #83A2A4;
 }
 .book_now_btn a {
