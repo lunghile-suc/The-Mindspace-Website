@@ -100,24 +100,3 @@ let phone_number = document.querySelector("#phone_number");
 let email = document.querySelector("#email");
 let therapy_service = document.querySelector("#therapy_service");
 let therapist = document.querySelector("#therapist");
-
-form_submit.addEventListener('submit', (e) => {
-	e.preventDefault();
-
-	Email.send({
-		Host : "smtp.gmail.com",
-		Username : "clsuccess6@gmail.com",
-		Password : "lungh!le_7",
-		To : "lunghilesuccess1@gmail.com",
-		From : email.value,
-		Subject : "New email from Mindspace",
-		Body :
-			"New email has been sent from the mindspace website by" + first_name.value + last_name.value + "with the phone number: " + phone_number.value
-			 + " requesting services of " + therapy_service.value + " from " + therapist.value
-	}).then(
-	  message => alert("Thank you!. The email has been sent."), 
-	  console.log()
-	);
-
-	reset();
-}, false);

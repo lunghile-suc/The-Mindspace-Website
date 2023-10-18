@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”robots” content="index, follow">
+    <meta name="description" content="We are a team of 5 psychologists and occupational therapist with over 24 years of combined mental health experience. We have varied areas of interest ranging from individual therapy, family therapy, group therapy and assessment administration.">
     <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./slick/slick.css">
     <link rel="stylesheet" href="./slick/slick-theme.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>The Mindspace</title>
+    <title>The Mindspace Mental Healthcare</title>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
                     <li><a href="#about" class="link-toggle">ABOUT US</a></li>
                     <li><a href="#services" class="link-toggle">SERVICES</a></li>
                     <li><a href="#team" class="link-toggle">TEAM</a></li>
-                    <li><a href="contact.html" class="link-toggle">CONTACT</a></li>
+                    <li><a href="contact.php" class="link-toggle">CONTACT</a></li>
                 </ul>
             </div>
         </nav>

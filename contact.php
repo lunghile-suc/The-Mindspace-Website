@@ -11,11 +11,7 @@
 </head>
 
 <body>
-    <!-- <div class="whatsapp_link">
-        <a href="https://wa.me/">
-            <img src="./images/whatsapp.png" alt="" srcset="">
-        </a>
-    </div> -->
+    
     <section class="nav_section">
         <nav class="nav">
             <div class="logo">
@@ -50,7 +46,7 @@
                 <h1>Get in Touch</h1>
             </div>
             <div class="form_controls">
-                <form class="form">
+                <form action="email.php" method="post" class="form">
                     <div class="form-control">
                         <div>
                             <label for="">First Name</label>
@@ -74,7 +70,7 @@
                     <div class="form-control">
                         <div>
                             <label for="">Which therapist would you like to book a session with?</label>
-                            <select name="therapists" id="therapist">
+                            <select name="therapist" id="therapist">
                                 <option value="">Caroline Kapp</option>
                                 <option value="">Alexander Oosthuysen</option>
                                 <option value="">Kim Serebro</option>
@@ -85,11 +81,11 @@
                         </div>
                         <div>
                             <label for="">How can we assist?</label>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                            <textarea name="" id="therapy_service" cols="30" rows="5"></textarea>
                         </div>
                     </div>
                     <div class="form_btn">
-                        <input id="btn" type="submit" value="SEND">
+                        <input id="btn" type="submit" value="SEND" name="submit">
                     </div>
                 </form>
             </div>
@@ -137,10 +133,9 @@
         </div>
         <p>The Mind Space © All Rights Reserved 2023. Created by Mvelisto Inc</p>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./scripts/jquery-3.6.0.min.js"></script>
     <script src="./slick/slick.min.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/"></script>
 </body>
 
 </html>
